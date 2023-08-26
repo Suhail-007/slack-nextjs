@@ -1,0 +1,97 @@
+.section__profile {
+  height: auto !important;
+
+  & h3 {
+    grid-column: 1/-1;
+  }
+
+  .profile__cont {
+    display: flex;
+    gap: 0 2rem;
+
+    &-photo {
+      margin: 0;
+      background: #fff;
+      padding: .2rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      filter: drop-shadow(1px 1px 5px var(--light-shadow-white));
+
+      & img {
+        width: 10rem !important;
+        height: 10rem !important;
+      }
+    }
+  }
+
+  hr {
+    border: none;
+    background-color: #777;
+    margin-block: 4rem;
+    display: block;
+    border-top: .1rem solid var(--light-shadow-white);
+  }
+
+  .profile__info,
+  .section__settings>div {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 0.5rem 1rem;
+    justify-content: center;
+  }
+
+  .section__settings>div>h4 {
+    grid-column: 1/-1;
+  }
+
+  .section__settings>div>div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: .8rem;
+
+    &>select {
+      appearance: none;
+      background: #fff;
+      padding: .5rem;
+      border-radius: 0.3rem;
+      outline: none;
+    }
+  }
+
+  .section__profile__buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem 0;
+    align-items: center;
+    margin-top: 4rem;
+
+    @include respon(sm-desktop) {
+      margin-inline: auto;
+    }
+
+    @include respon(m-desktop) {
+      margin-inline: auto;
+    }
+
+    &--delete,
+    &--edit {
+      width: 80%;
+    }
+
+    @include respon(sm-desktop) {
+      width: 70%
+    }
+  }
+
+  //error
+  &>.message-cont {
+    margin-top: 2rem;
+    margin-inline: auto;
+
+    @include respon(sm-desktop) {
+      width: 70%;
+    }
+  }
+}

@@ -1,0 +1,182 @@
+.website_logo_container {
+  font-size: 1.6rem;
+  font-family: cursive;
+}
+
+// Global styles declarations
+.tab-heading {
+  font-size: $default-font-size;
+  margin-bottom: 1rem;
+}
+
+/* Navbar */
+li {
+  & .nav__item--name {
+    padding: 0.5rem;
+    text-transform: capitalize;
+    color: var(--font-primary);
+    transition: color 200ms;
+    user-select: none;
+    font-size: 1.4rem;
+
+    @include respon(m-desktop) {
+      font-size: 1.22rem;
+    }
+
+    @include respon(xl-desktop) {
+      font-size: 1.6rem;
+      letter-spacing: 1px;
+    }
+  }
+
+  &:hover .nav__item--name,
+  &.active .nav__item--name {
+    color: var(--border-primary);
+  }
+}
+
+.acc_div>div:last-child {
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: bold;
+  letter-spacing: .3rem;
+  text-transform: capitalize;
+  text-align: left;
+  justify-self: start;
+
+  @include respon(tab-port) {
+    font-size: 1.6rem;
+  }
+
+  & p {
+    margin: 0;
+    margin-bottom: 1rem;
+  }
+}
+
+/* Statistics view */
+.statistics_boxes {
+  font-size: 1.3rem;
+
+  @include respon(tab-port) {
+    font-size: 1.6rem;
+  }
+}
+
+.dollar-percentage p {
+  margin: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--font-primary);
+  position: relative;
+
+  @include respon(tab-port) {
+    font-size: 1.6rem;
+  }
+}
+
+.icon_heading p,
+.dollar-percentage span {
+  text-transform: uppercase;
+  font-weight: bold;
+  position: relative;
+}
+
+.box-1 .icon_heading p,
+.box-1 .dollar-percentage span {
+  color: var(--purple-primary-alpha-seven);
+}
+
+.box-2 .icon_heading p,
+.box-2 .dollar-percentage span {
+  color: var(--dark-bg-primary-color);
+}
+
+.box-3 .icon_heading p,
+.box-3 .dollar-percentage span {
+  color: var(--cyan-primary);
+}
+
+.box-4 .icon_heading p,
+.box-4 .dollar-percentage span,
+.box-4 .dollar-percentage p {
+  color: var(--dark-silver-primary);
+}
+
+/* Referral Container And fund transfer */
+.section__bottom {
+  &-ref {
+    color: var(--font-primary);
+
+    & h2 {
+      font-size: 2.5rem;
+      font-weight: 400;
+    }
+
+    &__sub-head {
+      font-size: 1.8rem;
+      font-weight: 400;
+
+      @include respon(xl-desktop) {
+        font-size: 2rem;
+      }
+    }
+
+    & a {
+      text-decoration: none;
+      font-size: 1.6rem;
+      color: var(--font-primary);
+
+      @include respon(xl-desktop) {
+        font-size: 1.8rem;
+      }
+    }
+  }
+}
+
+/* Profile Section */
+.profile__cont-photo {
+  &+div>p {
+    font-size: 1.4rem;
+  }
+}
+
+.profile__info>div>p {
+  font-size: 1.3rem;
+
+  &:not(.email) {
+    text-transform: capitalize;
+  }
+}
+
+.section__settings>div>div {
+  &>label {
+    font-size: 1.3rem;
+  }
+
+  &>select {
+    text-align: center;
+    font-size: 1.1rem;
+    text-transform: capitalize;
+  }
+}
+
+
+//FOOTER
+.footer {
+  text-align: center;
+  font-size: $default-font-size;
+  color: #fff;
+
+  & p {
+    margin-inline: 0;
+    margin-bottom: 0;
+  }
+
+  & a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: capitalize;
+  }
+}

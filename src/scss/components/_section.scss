@@ -1,0 +1,23 @@
+.section {
+  border-top-left-radius: $border-top-left-radius;
+  padding: 1rem 0rem 3rem 2rem;
+  min-height: $section-min-height;
+  background-color: var(--white-bg);
+  color: var(--font-primary);
+
+  @include respon(xl-desktop) {
+    border-top-left-radius: calc($border-top-left-radius * 2);
+    padding: 2rem 1rem 3rem 2rem;
+    max-width: 95rem;
+    margin-inline: auto;
+  }
+
+  &_items {
+    display: flex;
+    grid-column: span 2;
+    justify-content: space-between;
+    border-radius: 0.3rem;
+    box-shadow: .1rem .1rem 5px 0 var(--shadow-alpha-three);
+    padding-inline: 0.5rem;
+  }
+}

@@ -1,0 +1,28 @@
+.card {
+  &--vertical {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: flex-start;
+    width: 12rem;
+    height: 18rem;
+    padding: 1rem 1rem 1.5rem;
+    border-radius: 1.2rem;
+    overflow: hidden;
+    position: relative;
+    
+    @include respon(tab-port) {
+      width: 16rem;
+      height: 22rem;
+    }
+  }
+
+  &--horizontal {
+    display: flex;
+    padding: 1.5rem;
+    position: relative;
+    border-radius: .5rem;
+    color: var(--font-primary);
+    box-shadow: .3rem .3rem .5rem 0;
+  }
+}

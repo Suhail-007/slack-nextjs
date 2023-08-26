@@ -1,0 +1,157 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: 'Rubik', sans-serif;
+}
+
+html {
+  /* 1REM === 10PX */
+  font-size: 62.5%;
+
+  /* 1REM === 5PX*/
+  @include respon(phone) {
+    font-size: 45%;
+  }
+
+  /* 1REM ===8PX */
+  @include respon(m-phone) {
+    font-size: 50%;
+  }
+
+  /*1REM === 12.8PX*/
+  @include respon(l-phone) {
+    font-size: 80%;
+  }
+
+  /*1REM === 13.6PX*/
+  @include respon(tab-port) {
+    font-size: 85%;
+  }
+
+  @include respon(xl-desktop) {
+    font-size: 105%;
+  }
+
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  position: relative;
+  background: linear-gradient(135deg, var(--bg-secondary), var(--bg-primary)) no-repeat;
+
+  @include respon(tab-port) {
+    overflow: auto !important;
+  }
+}
+
+body input,
+body button {
+  font-family: inherit !important;
+  letter-spacing: 1px;
+  line-height: 110%;
+
+}
+
+.website-logo>img {
+  border-radius: $BR-logo;
+  width: 100%;
+}
+
+.section-loader {
+  height: 100%;
+  width: 100%;
+  row-gap: 1rem;
+  padding: 8rem 2rem 2rem;
+  color: var(--purple-primary);
+  font-size: 1.6rem;
+
+  & svg {
+    width: 5rem;
+    height: 5rem;
+    fill: currentColor;
+    animation: load 1.5s infinite;
+  }
+}
+
+main {
+  position: relative;
+  border-top-left-radius: $border-top-left-radius;
+  margin-top: .5rem;
+  margin-left: 4rem;
+  min-height: 100vh;
+  background-color: var(--white-bg);
+  box-shadow: .1rem 0 .5rem 0 var(--shadow-alpha-five);
+
+  @include respon(tab-port) {
+    margin-left: 6rem;
+  }
+
+  @include respon(l-desktop) {
+    max-width: 85vw;
+    margin-left: auto;
+  }
+
+  @include respon(xl-desktop) {
+    max-width: 90vw;
+    border-top-left-radius: calc($border-top-left-radius * 2);
+  }
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background: var(--bg-primary-alpha-five);
+    border-top-left-radius: $border-top-left-radius;
+
+    @include respon(xl-desktop) {
+      border-top-left-radius: calc($border-top-left-radius * 2);
+    }
+  }
+
+  //first overlay
+  &::before {
+    top: $second-layer-top;
+    left: calc($second-layer-left / 3);
+    z-index: -1;
+    box-shadow: 0 .1rem .5rem .3rem var(--layer-one-secondary);
+
+    @include respon(xl-desktop) {
+      left: calc($second-layer-left / 3);
+    }
+  }
+
+  //second overlay
+  &::after {
+    top: calc($second-layer-top /4);
+    left: $second-layer-left;
+    z-index: -2;
+    box-shadow: -.1rem .1rem 1rem .5rem var(--layer-two-shadow);
+
+    @include respon(m-desktop) {
+      top: calc($second-layer-top * 1.5);
+      left: calc($second-layer-left/2);
+    }
+
+    @include respon(xl-desktop) {
+      left: calc($second-layer-left / 1.5);
+    }
+  }
+}
+
+.footer {
+  background: var(--bg-footer);
+  margin-top: 0.2rem;
+  padding: 5rem 0 2.5rem;
+  box-shadow: 0px .1rem 5px 0 var(--shadow);
+  border-radius: 2rem 2rem 0 0;
+
+  &__links-cont {
+    justify-items: center;
+    gap: 1.6rem 0;
+  }
+}

@@ -1,0 +1,93 @@
+.box {
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  & .icon_heading>div {
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: .5rem;
+    padding: 0.3rem;
+    width: 2.8rem;
+    height: 2.8rem;
+    position: relative;
+    box-shadow: .3rem .3rem .5rem 0 rgba(0, 0, 0, 0.1);
+
+    &>svg {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+
+  &-1 {
+    background: var(--purple-primary-alpha-five);
+    box-shadow: .5rem .5rem 1rem 0 var(--purple-primary-alpha-seven), .1rem .1rem 1.5rem 0 var(--shadow-alpha-three);
+
+    &::before {
+      background: linear-gradient(var(--purple-primary), rgba(255, 255, 255, 0.3));
+      top: 50%;
+    }
+
+    & .icon_heading>div {
+      padding-left: 0.2rem;
+
+      &>svg {
+        fill: var(--purple-primary-alpha-seven);
+      }
+    }
+  }
+
+  &-2 {
+    background: var(--bg-primary-alpha-six);
+    box-shadow: .5rem .5rem 1rem 0  var(--bg-primary-second);
+
+    &::before {
+      background: linear-gradient(var(--dark-bg-primary-alpha-eight), rgba(255, 255, 255, 0.3));
+      top: 20%;
+    }
+
+    & .icon_heading>div>svg {
+      fill: var(--dark-bg-primary-alpha-eight);
+      fill-opacity: 1;
+      stroke: none;
+      stroke-width: 1rem;
+    }
+  }
+
+  &-3 {
+    background: var(--cyan-primary-alpha-three);
+    box-shadow: .5rem .5rem 1rem 0 var(--cyan-primary-alpha-seven);
+
+    &::before {
+      top: 50%;
+      background: linear-gradient(var(--cyan-primary-alpha-five), rgba(255, 255, 255, 0.2));
+    }
+
+    & .icon_heading>div>svg {
+      fill: var(--cyan-primary);
+      stroke-width: 1rem;
+    }
+  }
+
+  &-4 {
+    background: var(--silver-primary);
+    box-shadow: .5rem .5rem 1rem 0 var(--dark-silver-primary);
+
+    &::before {
+      top: 70%;
+      background: linear-gradient(var(--dark-silver-alpha-eight), hsla(0, 0%, 100%, 0.5));
+    }
+
+    & .icon_heading>div>svg {
+      fill: var(--dark-silver-primary);
+    }
+
+  }
+}

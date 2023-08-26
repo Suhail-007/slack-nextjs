@@ -1,0 +1,46 @@
+.section__bottom {
+  margin-top: 10rem;
+
+  @include respon(xl-desktop) {
+    margin-top: 0;
+  }
+
+  &-ref {
+    background: var(--purple-primary-alpha-three);
+    padding: 5rem 1.5rem;
+
+    @include respon(m-desktop) {
+      padding: 0 1.5rem;
+    }
+
+    @include respon(xl-desktop) {
+      padding: 5rem 1.5rem;
+
+      & h2 {
+        padding-bottom: 3rem;
+      }
+
+      & button {
+        margin-block: 3rem;
+      }
+    }
+
+    &__img-cont {
+      display: flex;
+
+      @include respon(tab-port) {
+        width: 100%;
+      }
+
+      & img {
+        width: 100%;
+      }
+    }
+  }
+
+  & button svg {
+    width: 2.5rem;
+    height: 2.5rem;
+    fill: #fff;
+  }
+}

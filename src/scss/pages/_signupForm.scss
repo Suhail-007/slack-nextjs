@@ -1,0 +1,80 @@
+.signup__form {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  width: 70%;
+  row-gap: 1rem;
+  color: var(--font-primary);
+
+  @include respon(m-desktop) {
+    width: 50%;
+
+    & button {
+      margin: 1rem auto 0 auto;
+      width: 70% !important;
+    }
+  }
+
+
+  &__profile {
+    display: grid;
+    grid-template-columns: min-content;
+    grid-template-rows: 2fr;
+    align-items: center;
+    column-gap: 1rem;
+    height: fit-content;
+    margin-bottom: 2rem;
+
+    @include respon(m-desktop) {
+      column-gap: 3rem;
+    }
+
+    &__fake {
+      grid-row: span 2;
+      background: #F0F0F0;
+      padding: .5rem;
+      border-radius: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    label {
+      font-size: 1.3rem;
+    }
+
+    input {
+      grid-column: 2 / 3;
+      font-size: 1.4rem;
+    }
+  }
+
+  &>input {
+    margin-bottom: 1rem;
+    padding: .7rem 1rem;
+    font-size: 1.3rem;
+  }
+
+  &>label {
+    font-size: 1.2rem;
+  }
+
+  &__phone-input {
+    display: flex;
+    gap: 0 1rem;
+
+    & :first-child {
+      flex-basis: 5rem;
+      width: 100%;
+      font-size: 1.3rem;
+      padding: .8rem;
+      outline: .5px solid var(--font-primary);
+      border: none;
+      border-radius: 2px;
+    }
+  }
+
+  &>.signup-login {
+    margin-inline: auto !important;
+  }
+}

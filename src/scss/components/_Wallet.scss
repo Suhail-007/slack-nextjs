@@ -1,0 +1,88 @@
+.wallet {
+  background: var(--bg-primary-alpha-five);
+
+  &__btns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 2rem;
+  }
+
+  &__btns button.active {
+    color: white;
+    box-shadow: inset 100rem 0 0 0 var(--purple-primary-alpha-nine);
+    overflow: hidden;
+  }
+
+  &__deposit-income {
+    background-color: var(--blue-primary-alpha-five);
+    border-radius: 1.6rem;
+    width: 90%;
+    margin: 5rem auto;
+    padding: 2rem 1rem;
+    color: #fff;
+    text-align: center;
+    font-size: 1.7rem;
+    box-shadow: .5rem .5rem 1rem .1rem var(--blue-primary-alpha-three);
+
+    @include respon(tab-port) {
+      max-width: 60%;
+    }
+  }
+
+  &__input-cont {
+    padding: 0 1rem;
+    font-size: 1.8rem;
+
+
+    &__input-btns {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      row-gap: 1rem;
+      padding: 1rem;
+
+      &>label {
+        color: var(--font-primary);
+        font-size: 1.6rem;
+        align-self: start;
+        transform: translateX(-1rem);
+        
+        @include respon(tab-port) {
+          align-self: center;
+        }
+      }
+
+      &>input {
+        border-radius: 1.1rem;
+        border: none;
+        padding: 1.6rem;
+        width: 100%;
+        transition: all 150ms ease-in;
+        font-size: 1.6rem;
+        background: var(--bg-primary-alpha-eight);
+        color: var(--font-primary);
+               
+        @include respon(tab-port) {
+          max-width: 60%;
+        }
+
+        &:focus,
+        &:hover {
+          outline: 3px solid var(--blue-primary-alpha-three);
+          outline-offset: 0.1rem;
+        }
+      }
+
+      & button {
+        border-radius: 100px;
+        margin-block: 2rem;
+
+        &:hover,
+        & bocus {
+          background-color: var(--blue-primary-alpha-three);
+        }
+      }
+    }
+  }
+
+}
