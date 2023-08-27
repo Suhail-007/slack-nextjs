@@ -1,6 +1,6 @@
 .btn {
   border: none;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   padding: 1.5rem 4rem;
   font-size: 1.4rem;
   letter-spacing: 1;
@@ -8,17 +8,17 @@
   font-family: inherit;
   transform: translateY(0);
   cursor: pointer;
-  box-shadow: 0 .3rem .6rem 0 var(--shadow-alpha-six);
-  transition: all .2s ease-in-out;
+  box-shadow: 0 0.3rem 0.6rem 0 var(--shadow-alpha-six);
+  transition: all 0.2s ease-in-out;
 
   &:focus,
   &:hover {
-    transform: translateY(-.1rem);
+    transform: translateY(-0.1rem);
   }
 
   &:active {
-    box-shadow: 0 .4rem .3rem 0 var(--shadow-alpha-six);
-    transform: translateY(.5rem);
+    box-shadow: 0 0.4rem 0.3rem 0 var(--shadow-alpha-six);
+    transform: translateY(0.5rem);
   }
 
   &-purple {
@@ -28,12 +28,18 @@
     font-size: 1.3rem;
     letter-spacing: 1;
     margin: 2rem 0;
-    background: linear-gradient(360deg, var(--purple-primary), var(--purple-primary-alpha-four));
-    box-shadow: .5rem 0 1rem 0 var(--purple-primary-alpha-four), 0 .5rem 1rem .1rem var(--purple-primary-alpha-four) !important;
+    background: linear-gradient(
+      360deg,
+      var(--purple-primary),
+      var(--purple-primary-alpha-four)
+    );
+    box-shadow: 0.5rem 0 1rem 0 var(--purple-primary-alpha-four),
+      0 0.5rem 1rem 0.1rem var(--purple-primary-alpha-four) !important;
 
     &:hover,
     &:focus {
-      box-shadow: .5rem 0 1rem 0 var(--purple-primary-alpha-four), 0 .5rem 1rem .1rem var(--purple-primary-alpha-four) !important;
+      box-shadow: 0.5rem 0 1rem 0 var(--purple-primary-alpha-four),
+        0 0.5rem 1rem 0.1rem var(--purple-primary-alpha-four) !important;
     }
   }
 
@@ -53,13 +59,26 @@
 
   &-light-blue {
     background: none;
-    border: 2px solid var(--blue-primary-alpha-five);
+    border: 2px solid var(--blue-secondary);
     color: var(--blue-primary);
-    font-size: 1.5rem !important;
+    font-size: 1.2rem !important;
 
     &:hover,
     &:focus {
-      background: var(--blue-primary-alpha-three);
+      background: var(--blue-secondary);
+    }
+  }
+
+  &-light-blue-invert {
+    background: var(--blue-secondary);
+    border: 2px solid var(--blue-secondary);
+    color: #fff !important;
+    font-size: 1.2rem !important;
+
+    &:hover,
+    &:focus {
+      background: var(--blue-primary-alpha-six);
+      color: var(--blue-secondary) !important;
     }
   }
 
